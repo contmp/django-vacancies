@@ -1,0 +1,184 @@
+# Django-Vancacies
+# Copyright (C) 2019 Bastian Probian
+# This file is distributed under the same license as the PACKAGE package.
+# Bastian Probian <contmp@me.com>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-27 00:49+0100\n"
+"PO-Revision-Date: 2019-11-27 00:57+0100\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 2.2.4\n"
+
+msgid "Conditions"
+msgstr "Konditionen"
+
+msgid "Vacancies Config"
+msgstr "Stellenangebotekonfiguration"
+
+msgid "Mrs"
+msgstr "Frau"
+
+msgid "Mr"
+msgstr "Herr"
+
+msgid "Email"
+msgstr "E-Mail"
+
+msgid "Fax"
+msgstr "Fax"
+
+msgid "First name"
+msgstr "Vorname"
+
+msgid "Image"
+msgstr "Bild"
+
+msgid "Last name"
+msgstr "Nachname"
+
+msgid "Mobile"
+msgstr "Mobil"
+
+msgid "Phone"
+msgstr "Telefon"
+
+msgid "Salutation"
+msgstr "Anrede"
+
+msgid "Contact person"
+msgstr "Ansprechpartner"
+
+msgid "Contact persons"
+msgstr "Ansprechpartner"
+
+msgid "No management responsibility"
+msgstr "Keine Führungsverantwortung"
+
+msgid "All management levels"
+msgstr "Alle Führungsebenen"
+
+msgid "Team management, project management, group management"
+msgstr "Teamleitung, Projektleitung, Gruppenleitung"
+
+msgid "Head of Department, Division Management, Department Management"
+msgstr "Abteilungsleitung, Bereichsleitung, Ressortleitung"
+
+msgid "Management, board, management"
+msgstr "Geschäftsleitung, Vorstand, Betriebsleitung"
+
+msgid "Staff function"
+msgstr "Stabsfunktion"
+
+msgid "Entry level"
+msgstr "Berufseinsteiger"
+
+msgid "With professional experience"
+msgstr "Mit Berufserfahrung"
+
+msgid "Additional working hours information"
+msgstr "Weitere Informationen zur Arbeitszeit"
+
+msgid "Box Number"
+msgstr "Chiffrenummer"
+
+msgid "Collective agreement"
+msgstr "Tarifvertrag"
+
+msgid "Compensation"
+msgstr "Vergütung"
+
+msgid "Contact Person"
+msgstr "Ansprechpartner"
+
+msgid "Count"
+msgstr "Anzahl"
+
+msgid "Description"
+msgstr "Beschreibung"
+
+msgid "Earliest start"
+msgstr "Frühester Beginn"
+
+msgid "Hours per week"
+msgstr "Wochenstunden"
+
+msgid "Latest start"
+msgstr "Spätester Beginn"
+
+msgid "Limited to"
+msgstr "Befristet bis"
+
+msgid "Management responsibility"
+msgstr "Führungsverantwortung"
+
+msgid "Marginal employment"
+msgstr "Geringfügige Beschäftigung (Mini Job)"
+
+msgid "Max Distance"
+msgstr "Maximale Entfernung"
+
+msgid "Pdf"
+msgstr "Pdf"
+
+msgid "Social insurance employment"
+msgstr "Sozialversicherungspflichtige Beschäftigung"
+
+msgid "Suitable to support the integration of immigrants"
+msgstr "Geeignet, die Integration Zugewanderter zu unterstützen"
+
+msgid "Tariff commitment"
+msgstr "Tarifbindung"
+
+msgid "Temporary for month"
+msgstr "Befristet für Monate"
+
+msgid "Title"
+msgstr "Titel"
+
+msgid "Work experience"
+msgstr "Berufserfahrung"
+
+msgid "Full time"
+msgstr "Vollzeit"
+
+msgid "Night work"
+msgstr "Nachtarbeit"
+
+msgid "Part time (afternoon)"
+msgstr "Teilzeit (Nachmittag)"
+
+msgid "Part time (eve)"
+msgstr "Teilzeit (Abend)"
+
+msgid "Part time (flexible)"
+msgstr "Teilzeit (flexibel)"
+
+msgid "Part time (morning)"
+msgstr "Teilzeit (Vormittag)"
+
+msgid "Part time (shift)"
+msgstr "Teilzeit (Schicht)"
+
+msgid "Shift"
+msgstr "Schicht"
+
+msgid "Telework"
+msgstr "Heimarbeit"
+
+msgid "Weekend"
+msgstr "Wochenende"
+
+msgid "Vacancy"
+msgstr "Stellenangebot"
+
+msgid "Vacancies"
+msgstr "Stellenangebote"

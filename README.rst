@@ -14,6 +14,8 @@ Quick start
     INSTALLED_APPS = [
         ...
         'vacancies',
+        # or
+        'vacancies.apps.VacanciesConfig', # <- prefered for localized app name
     ]
 
 2. Include the vacancies URLconf in your project urls.py like this::
