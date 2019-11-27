@@ -11,6 +11,8 @@
                 <li>
                     <a href="{{ vacancy.get_absolute_url }}">{{ vacancy }}</a>
                 </li>
+            {% empty %}
+                <p class="lead text-center">- {% trans 'Currently there are no public vacancies available' %} -</p>
             {% endfor %}
         </ul>
     </div>
