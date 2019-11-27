@@ -78,7 +78,7 @@ class Vacancy(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('vacancies:detail', kwargs={'slug': self.slug})
+        return reverse('vacancy-detail', kwargs={'slug': self.slug})
 
     def save(self, *args, **kwargs):
         if not self.pk:
