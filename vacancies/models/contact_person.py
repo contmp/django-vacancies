@@ -1,17 +1,9 @@
 # -*- coding: utf-8 -*-
-import os
 import uuid
-import hashlib
 from django.db import models
-from django.utils.text import slugify
 from django.utils.translation import ugettext_lazy as _
 
-
-def get_image_destination(instance, filename):
-    model_name = ('%s' % instance.__class__.__name__).lower()
-    _, ext = os.path.splitext(filename)
-    uu = hashlib.md5(instance.image.read()).hexdigest()
-    return '/'.join([model_name, uu[:2], uu[2:4], uu, slugify(instance.name) + ext.lower()])
+from vacancies.storage import contact_person_image
 
 
 class ContactPerson(models.Model):
@@ -27,7 +19,7 @@ class ContactPerson(models.Model):
     fax = models.CharField(max_length=255, blank=True, verbose_name=_('Fax'))
     first_name = models.CharField(max_length=255, blank=True, verbose_name=_('First name'))
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    image = models.ImageField(upload_to=get_image_destination, null=True, blank=True, verbose_name=_('Image'))
+    image = models.ImageField(upload_to=contact_person_image, null=True, blank=True, verbose_name=_('Image'))
     last_name = models.CharField(max_length=255, blank=True, verbose_name=_('Last name'))
     mobile = models.CharField(max_length=255, blank=True, verbose_name=_('Mobile'))
     name = models.CharField(max_length=255, blank=True, verbose_name=_('First name'))
@@ -39,8 +31,12 @@ class ContactPerson(models.Model):
         verbose_name_plural = _('Contact persons')
 
     def __str__(self):
+        return self.full_name
 
-        if self.first_name and self.last_name:
-            return '%s %s'.strip() % (self.first_name, self.last_name)
+    @property
+    def full_name(self):
+        if self.first_name or self.last_name:
+            return '%s %s %s'.strip() % (self.get_salutation_display(), self.first_name, self.last_name)
 
         return '%s' % self.pk
+    full_name.fget.short_description = _('Full name')
