@@ -19,7 +19,7 @@ Detailed documentation is in the "docs" directory - one day
 
 2. Include the vacancies URLconf in your project urls.py like this::
 
-    path('vacancies/', include('vacancies.urls')),
+    path('vacancies/', include('vacancies.urls', namespace='vacancies')),
 
 3. Run `python manage.py migrate` to create the vacancies models.
 
