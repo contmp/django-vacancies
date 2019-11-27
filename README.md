@@ -104,6 +104,14 @@ pip uninstall django-vacancies
 
 ```
 
+### Distribute
+
+```sh
+# Inside cloned repository folder:
+python setup.py sdist
+twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
+```
+
 
 Credits:
 https://docs.djangoproject.com/en/2.2/intro/reusable-apps/
