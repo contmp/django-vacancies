@@ -3,15 +3,17 @@ from django.contrib import admin
 from django.utils.safestring import mark_safe
 from django.utils.translation import ugettext_lazy as _
 
-from core.admin import site
-from vacancies import models
+from vacancies.models import ContactPerson, Location, Vacancy
 
 
-@admin.register(models.Vacancy, site=site)
+@admin.register(Vacancy)
 class VacancyAdmin(admin.ModelAdmin):
+
+    save_as = True
 
     list_display = (
         'title',
+        'slug',
         'earliest_start',
         'hours_per_week',
         'is_public',
@@ -25,20 +27,28 @@ class VacancyAdmin(admin.ModelAdmin):
         'image_preview',
     )
 
+    filter_horizontal = (
+        'locations',
+    )
+
+    prepopulated_fields = {
+        "slug": ("title",)
+    }
+
     fieldsets = (
-        (None, {'fields': (
+        (_('Base Data'), {'classes': ('collapse',), 'fields': (
             'is_public',
             'title',
             'contact_person',
             'description',
             ('earliest_start', 'latest_start'),
         )}),
-        (_('Qualifications & Requirements'), {'classes': ('_collapse',), 'fields': (
+        (_('Qualifications & Requirements'), {'classes': ('collapse',), 'fields': (
             'work_experience',
             'management_responsibility',
             'max_distance',
         )}),
-        (_('Conditions'), {'classes': ('_collapse',), 'fields': (
+        (_('Conditions'), {'classes': ('collapse',), 'fields': (
             ('tariff_commitment', 'marginal_employment'),
             'social_insurance_employment',
             'collective_agreement',
@@ -46,7 +56,7 @@ class VacancyAdmin(admin.ModelAdmin):
             'temporary_for_month',
             'limited_to',
         )}),
-        (_('Working hours'), {'classes': ('_collapse',), 'fields': (
+        (_('Working hours'), {'classes': ('collapse',), 'fields': (
             (
                 'working_hours_part_time_flexible',
                 'working_hours_part_time_shift',
@@ -62,12 +72,16 @@ class VacancyAdmin(admin.ModelAdmin):
             'hours_per_week',
             'additional_working_hours_information',
         )}),
-        (_('Meta data'), {'classes': ('_collapse',), 'fields': (
+        (_('Locations'), {'classes': ('collapse',), 'fields': (
+            'locations',
+        )}),
+        (_('Meta data'), {'classes': ('collapse',), 'fields': (
             'suitable_to_support_the_integration_of_immigrants',
             'available_positions',
             'box_number',
+            'slug',
         )}),
-        (_('Alternative representations'), {'classes': ('_collapse',), 'fields': (
+        (_('Alternative representations'), {'classes': ('collapse',), 'fields': (
             'image_preview',
             'image',
             'pdf_version',
@@ -90,7 +104,7 @@ class VacancyAdmin(admin.ModelAdmin):
         }
 
 
-@admin.register(models.ContactPerson, site=site)
+@admin.register(ContactPerson)
 class ContactPersonAdmin(admin.ModelAdmin):
 
     list_display = (
@@ -117,6 +131,7 @@ class ContactPersonAdmin(admin.ModelAdmin):
             ('first_name', 'last_name'),
             ('phone', 'mobile'),
             ('email', 'fax'),
+            ('company_name', 'position'),
             'image',
         )}),
     )
@@ -135,3 +150,29 @@ class ContactPersonAdmin(admin.ModelAdmin):
         css = {
             'all': ('vacancies/css/admin.css',)
         }
+
+
+@admin.register(Location)
+class LocationAdmin(admin.ModelAdmin):
+
+    list_display = (
+        'label',
+        'street',
+        'zip_code',
+        'city',
+        'country',
+    )
+
+    list_filter = (
+        'city',
+    )
+
+    fieldsets = (
+        (None, {'fields': (
+            'label',
+            'street',
+            'zip_code',
+            'city',
+            'country',
+        )}),
+    )

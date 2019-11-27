@@ -1,0 +1,26 @@
+.vLargeTextField#id_description {
+    height: 250px;
+    font-size: 11pt;
+}
+
+th.column-image_preview {
+    width: 80px;
+}
+
+td.field-image_preview {
+    padding: 0;
+    text-align: center;
+}
+
+.form-row.field-image_preview {
+    border-bottom: none;
+    padding: 0;
+}
+
+.form-row.field-image_preview label {
+    display: none;
+}
+
+.form-row.field-image_preview .readonly {
+    margin-left: 0;
+}

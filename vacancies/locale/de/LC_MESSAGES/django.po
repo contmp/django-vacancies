@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-27 01:53+0100\n"
-"PO-Revision-Date: 2019-11-27 01:53+0100\n"
+"POT-Creation-Date: 2019-11-27 03:34+0100\n"
+"PO-Revision-Date: 2019-11-27 03:34+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -18,6 +18,9 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.2.4\n"
 
+msgid "Base Data"
+msgstr "Stammdaten"
+
 msgid "Qualifications & Requirements"
 msgstr "Qualifikationen & Voraussetzungen"
 
@@ -26,6 +29,9 @@ msgstr "Konditionen"
 
 msgid "Working hours"
 msgstr "Arbeitszeiten"
+
+msgid "Locations"
+msgstr "Standorte"
 
 msgid "Meta data"
 msgstr "Metadaten"
@@ -44,6 +50,9 @@ msgstr "Frau"
 
 msgid "Mr"
 msgstr "Herr"
+
+msgid "Company Name"
+msgstr "Firmenname"
 
 msgid "Email"
 msgstr "E-Mail"
@@ -66,6 +75,9 @@ msgstr "Mobil"
 msgid "Phone"
 msgstr "Telefon"
 
+msgid "Position"
+msgstr "Position"
+
 msgid "Salutation"
 msgstr "Anrede"
 
@@ -77,6 +89,24 @@ msgstr "Ansprechpartner"
 
 msgid "Full name"
 msgstr "Vollständiger Name"
+
+msgid "Label"
+msgstr "Etikett"
+
+msgid "City"
+msgstr "Stadt"
+
+msgid "Country"
+msgstr "Land"
+
+msgid "Street"
+msgstr "Straße"
+
+msgid "Zip Code"
+msgstr "Postleitzahl"
+
+msgid "Location"
+msgstr "Standort"
 
 msgid "No management responsibility"
 msgstr "Keine Führungsverantwortung"
@@ -119,6 +149,9 @@ msgstr "Vergütung"
 
 msgid "Contact Person"
 msgstr "Ansprechpartner"
+
+msgid "Created at"
+msgstr "Erstellt am"
 
 msgid "Description"
 msgstr "Beschreibung"
@@ -168,6 +201,9 @@ msgstr "Befristet für Monate"
 msgid "Title"
 msgstr "Titel"
 
+msgid "Updated at"
+msgstr "Aktualisiert am"
+
 msgid "Work experience"
 msgstr "Berufserfahrung"
 
@@ -207,8 +243,8 @@ msgstr "Stellenangebot"
 msgid "Vacancies"
 msgstr "Stellenangebote"
 
-#~ msgid "Count"
-#~ msgstr "Anzahl"
+msgid "Vacancy details"
+msgstr "Stellenangebotdetails"
 
-#~ msgid "Pdf"
-#~ msgstr "Pdf"
+msgid "Public Vacancies"
+msgstr "Öffentliche Stellenangebote"

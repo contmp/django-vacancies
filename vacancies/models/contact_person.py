@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-import uuid
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
@@ -15,15 +14,16 @@ class ContactPerson(models.Model):
         (SALUTATION_MR, _('Mr')),
     )
 
+    company_name = models.CharField(max_length=255, blank=True, verbose_name=_('Company Name'))
     email = models.EmailField(blank=True, verbose_name=_('Email'))
     fax = models.CharField(max_length=255, blank=True, verbose_name=_('Fax'))
     first_name = models.CharField(max_length=255, blank=True, verbose_name=_('First name'))
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     image = models.ImageField(upload_to=contact_person_image, null=True, blank=True, verbose_name=_('Image'))
     last_name = models.CharField(max_length=255, blank=True, verbose_name=_('Last name'))
     mobile = models.CharField(max_length=255, blank=True, verbose_name=_('Mobile'))
     name = models.CharField(max_length=255, blank=True, verbose_name=_('First name'))
     phone = models.CharField(max_length=255, blank=True, verbose_name=_('Phone'))
+    position = models.CharField(max_length=255, blank=True, verbose_name=_('Position'))
     salutation = models.PositiveSmallIntegerField(choices=SALUTATION_CHOICES, default=SALUTATION_MRS, verbose_name=_('Salutation'))
 
     class Meta:
