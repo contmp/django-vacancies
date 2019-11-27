@@ -5,6 +5,12 @@ For each vacancy, editors can choose between a various number of attributes.
 
 Detailed documentation is in the "docs" directory - one day
 
+## Install
+
+```
+pip install django-vacancies
+```
+
 ## Quick start
 
 ```
