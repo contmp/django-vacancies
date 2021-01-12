@@ -25,7 +25,7 @@ pip install django-vacancies
 
 2. Include the vacancies URLconf in your project urls.py like this::
 
-    path('vacancies/', include('vacancies.urls', namespace='vacancies')),
+    path('vacancies/', include(('vacancies.urls', 'vacancies'), namespace='vacancies')),
 
 3. Run `python manage.py migrate` to create the vacancies models.
 
